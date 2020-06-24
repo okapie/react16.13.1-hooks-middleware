@@ -9,11 +9,8 @@ app.use(bodyParser.json());
 
 const port = 8080;
 
-app.get("/api/v1/", function(req, res) {
-  res.json({
-    message: "Hello,world"
-  });
-});
+const router = require("./models/routes/v1/");
+app.use("/api/v1/", router);
 
 app.listen(port);
 consola.ready({
