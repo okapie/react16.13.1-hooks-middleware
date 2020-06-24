@@ -1,12 +1,22 @@
 const express = require("express");
-
 const router = express.Router();
+const UserModel = require("../../../models/userModel.js");
 
-// GET http://localhost:8080/api/v1/user/test
-router.get("/test", function (req, res) {
-  res.json({
-    message:"Here's user API."
-  });
+router.post("/", function(req, res) {
+    const User = new UserModel();
+
+    User.name = req.body.name;
+    User.screen_name = req.body.screen_name;
+    User.bio = req.body.bio;
+
+    User.save(function(err) {
+      if (err) {
+        res.send(err);
+        return;
+      }
+
+      res.json({ message: "Success!" });
+    });
 });
 
 module.exports = router;
