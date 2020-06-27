@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { connect } from "react-redux"
-import { requestFetchUsers } from "../redux/modules/action/";
+import requestFetchUsers from "../redux/modules/action/";
 
 class HomeComponent extends PureComponent {
   componentWillMount(){
