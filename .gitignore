@@ -4,11 +4,19 @@
 /server/node_modules
 
 # dependencies
+/redux-thunk/node_modules
+/redux-thunk-hooks/node_modules
 /redux-observable/node_modules
 
 # misc
 .DS_Store
+/redux-thunk/.DS_Store
+/redux-thunk-hooks/.DS_Store
 /redux-observable/.DS_Store
 
+/redux-thunk/yarn-debug.log*
+/redux-thunk/yarn-error.log*
+/redux-thunk-hooks/yarn-debug.log*
+/redux-thunk-hooks/yarn-error.log*
 /redux-observable/yarn-debug.log*
 /redux-observable/yarn-error.log*
