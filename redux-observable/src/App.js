@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import HomeComponent from "./comparison-middlewares/redux-observable/page/index.js";
+import HomeComponent from "./comparison-middlewares/page/index.js";
 
 function App() {
   return (
