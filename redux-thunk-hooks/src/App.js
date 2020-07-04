@@ -4,7 +4,7 @@ import LifecycleDemo from "./hooks";
 import { useLocalHistory } from "./customHooks/";
 import { useUserHook } from "./customHooksRedux/useUserHook";
 
-function App() {
+export default () => {
   const [random, setRandom] = useState(Math.random());
   const [immutable, setImmutable] = useState(2);
 
@@ -53,18 +53,14 @@ function App() {
       </React.Fragment>
       <hr />
       <h1># Custom Hooks Redux Sample</h1>
-      <React.Fragment>
-        {users.map((user) => (
-          <div key={user.email}>
-            <img src={user.picture.thumbnail} />
-            <p>Name:{user.name.first + " " + user.name.last}</p>
-            <p>Gender:{user.gender}</p>
-            <p>Email:{user.email}</p>
-          </div>
-        ))}
-      </React.Fragment>
+      <ul>
+      {users.map(({ _id, name, screen_name }) => (
+        <li key={`user-${_id}`}>
+          <div>Name: {name}</div>
+          <div>Screen Name: {screen_name}</div>
+        </li>
+      ))}
+      </ul>
     </React.Fragment>
   );
 }
-
-export default App;

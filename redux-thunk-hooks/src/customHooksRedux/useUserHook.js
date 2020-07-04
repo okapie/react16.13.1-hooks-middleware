@@ -9,7 +9,7 @@ export const useUserHook = () => {
 
   useEffect(() => {
     loadUser()
-  }, []);
+  }, [users]);
 
   return users;
 };

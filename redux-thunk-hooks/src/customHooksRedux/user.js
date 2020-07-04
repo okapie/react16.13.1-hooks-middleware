@@ -16,13 +16,10 @@ export default function reducer(state = initialState, action = {}) {
 }
 
 export function load() {
-  return (dispatch, getState, client) => {
-    return client
-      .get("https://randomuser.me/api/")
-      .then(res => res.data)
-      .then(data => {
-        const results = data.results;
-        dispatch({ type: LOAD, results })
+  return (dispatch, getState, client) =>
+    client
+      .get("http://127.0.0.1:8080/api/v1/user")
+      .then(response => {
+        dispatch({ type: LOAD, results: response.data })
       })
-  }
 }
