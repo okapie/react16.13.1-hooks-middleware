@@ -5,11 +5,11 @@ import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import client from "axios";
 
-import App from "./App";
-import user from "./customHooksRedux/user";
+import App from "./pages/";
+import users from "./redux/modules/reducer/";
 
 const reducer = combineReducers({
-  user,
+  users,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

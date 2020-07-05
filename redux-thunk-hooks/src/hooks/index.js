@@ -1,11 +1,3 @@
-import { useEffect } from "react";
-
-export default ({ value }) => {
-  useEffect(() => {
-    console.log("render!", value);
-
-    return () => console.log("unmounting...", value);
-  }, [value]);
-
-  return "I'm a lifecycle demo.";
-}
+export const LifecycleDemo = require("./LifecycleDemo").default;
+export const PagingDemo = require("./PagingDemo").default;
+export const FetchUsersDemo = require("./LifecycleDemo").default;

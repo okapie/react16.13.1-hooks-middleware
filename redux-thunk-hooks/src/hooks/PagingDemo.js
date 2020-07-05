@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useLocalHistory = (topPage, lastPage) => {
+export default (topPage, lastPage) => {
   const initHistory = [topPage];
   const [history, setHistory] = useState(initHistory);
 
