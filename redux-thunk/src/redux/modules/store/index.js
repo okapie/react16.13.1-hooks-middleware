@@ -1,12 +1,20 @@
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import { rootReducer } from "../root.js";
+import { routerMiddleware, connectRouter } from "connected-react-router";
+import fetchUsers from "../reducer/";
 
-const reduxLogger = require("redux-logger");
-const { logger } = reduxLogger;
-const store = createStore(
-  rootReducer,
-  applyMiddleware(logger, thunk)
-);
+const middlewares = [thunk, routerMiddleware(history)];
+if (process.env.NODE_ENV === "development") {
+  const reduxLogger = require("redux-logger");
+  const { logger } = reduxLogger;
+  middlewares.push(logger);
+}
 
-export default store;
+export default (history) =>
+  createStore(
+    combineReducers({
+      fetchUsers,
+      router: connectRouter(history),
+    }),
+    applyMiddleware(...middlewares)
+  )
