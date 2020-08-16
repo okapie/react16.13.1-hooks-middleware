@@ -6,7 +6,7 @@ This project was generated with Create React App version 3.4.1.
 
 ## Description
 
-This project aims to compare custom hooks and Redux in using the following middlewares:
+This project aims to compare hooks and Redux in using the following middlewares:
 
 * redux-thunk
 * redux-saga
