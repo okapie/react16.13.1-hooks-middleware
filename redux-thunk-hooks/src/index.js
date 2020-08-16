@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
 import client from "axios";
 
+import "./App.css";
 import App from "./pages/";
 import users from "./redux/modules/reducer/";
 

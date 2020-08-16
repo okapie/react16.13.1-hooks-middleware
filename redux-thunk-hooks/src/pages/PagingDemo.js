@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import { PagingDemo } from "../hooks/";
 
 export default () => {
