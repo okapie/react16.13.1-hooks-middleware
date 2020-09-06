@@ -8,6 +8,7 @@
 /redux-thunk-hooks/node_modules
 /redux-saga/node_modules
 /redux-observable/node_modules
+/hooks-without-redux/node_modules
 
 # misc
 .DS_Store
@@ -15,6 +16,7 @@
 /redux-thunk-hooks/.DS_Store
 /redux-saga/.DS_Store
 /redux-observable/.DS_Store
+/hooks-without-redux/.DS_Store
 
 /redux-thunk/yarn-debug.log*
 /redux-thunk/yarn-error.log*
@@ -24,3 +26,5 @@
 /redux-saga/yarn-error.log*
 /redux-observable/yarn-debug.log*
 /redux-observable/yarn-error.log*
+/hooks-without-redux/yarn-debug.log*
+/hooks-without-redux/yarn-error.log*
