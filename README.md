@@ -25,7 +25,13 @@ Run ```node app/app.js``` under 'server' directory. Navigate to http://127.0.0.1
 
 ## Development server
 
-Run ```npm start``` for a dev server at root directory. 
+Run ```yarn start``` for a dev server at each app root directory. 
+
+e.g.
+```
+cd redux-saga
+yarn start
+```
 
 Navigate to http://127.0.0.1:3000/. The app will automatically reload if you change any of the source files.
 
