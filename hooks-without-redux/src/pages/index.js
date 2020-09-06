@@ -1,12 +1,8 @@
 import React from "react";
-import LifeCycleDemo from "./LifecycleDemo";
-import PagingDemo from "./PagingDemo";
-import FetchUsersDemo from "./FetchUsersDemo"
+import UsersListDemo from "./UsersListDemo";
 
 export default () => (
   <React.Fragment>
-    <LifeCycleDemo />
-    <PagingDemo />
-    <FetchUsersDemo />
+    <UsersListDemo />
   </React.Fragment>
 )
