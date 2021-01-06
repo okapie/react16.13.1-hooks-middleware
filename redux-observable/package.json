@@ -14,7 +14,7 @@
     "redux-observable": "1.2.0"
   },
   "devDependencies": {
-    "axios": "0.19.2",
+    "axios": "0.21.1",
     "redux-logger": "3.0.6"
   },
   "scripts": {
